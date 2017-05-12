@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UnitTesting</string>
+    <string name="empty_username_error">Username is empty</string>
+    <string name="empty_password_error">Please enter password</string>
+    <string name="incorrect_username_or_password">Username or password is wrong</string>
+    <string name="edit_text1_hint">Username or EmailID</string>
+    <string name="edit_text2_hint">Password</string>
+    <string name="login_attempt_exceeded_error">Try after sometime</string>
+</resources>
