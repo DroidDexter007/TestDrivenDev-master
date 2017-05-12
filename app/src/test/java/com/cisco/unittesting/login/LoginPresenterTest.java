@@ -48,22 +48,22 @@ public class LoginPresenterTest {
         Mockito.verify(mView).showEmptyPasswordErrorMessage(R.string.empty_password_error);
     }
 
-    @Test
-    public void loginAttemptIsExceeded() throws Exception {
-        Assert.assertEquals(1, mLoginPresenter.incrementLoginAttempt());
-        Assert.assertEquals(2, mLoginPresenter.incrementLoginAttempt());
-        Assert.assertEquals(3, mLoginPresenter.incrementLoginAttempt());
-        Assert.assertTrue(mLoginPresenter.isLoginAttemptExceeded());
-        mLoginPresenter.onLoginButtonClick();
-        Mockito.verify(mView).showLoginAttemptExceededAlert();
-    }
+//    @Test
+//    public void loginAttemptIsExceeded() throws Exception {
+//        Assert.assertEquals(1, mLoginPresenter.incrementLoginAttempt());
+//        Assert.assertEquals(2, mLoginPresenter.incrementLoginAttempt());
+//        Assert.assertEquals(3, mLoginPresenter.incrementLoginAttempt());
+//        Assert.assertTrue(mLoginPresenter.isLoginAttemptExceeded());
+//        mLoginPresenter.onLoginButtonClick();
+//        Mockito.verify(mView).showLoginAttemptExceededAlert();
+//    }
 
-    @Test
-    public void checkIsConnectedToInternet() throws Exception {
-        Mockito.when(mAppStatus.isOnline()).thenReturn(true);
-        mLoginPresenter.onLoginButtonClick();
-
-    }
+//    @Test
+//    public void checkIsConnectedToInternet() throws Exception {
+//        Mockito.when(mAppStatus.isOnline()).thenReturn(true);
+//        mLoginPresenter.onLoginButtonClick();
+//
+//    }
 
     @Test
     public void whenUsernameAndPasswordNotEmptyTestOnServerWithWrongCredentials() throws Exception {
