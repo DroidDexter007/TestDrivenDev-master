@@ -67,7 +67,7 @@ public class LoginPresenterTest {
 
     @Test
     public void whenUsernameAndPasswordNotEmptyTestOnServerWithWrongCredentials() throws Exception {
-        Mockito.when(mView.getUsername()).thenReturn("");
+        Mockito.when(mView.getUsername()).thenReturn("param1");
         Mockito.when(mView.getPassword()).thenReturn("123456");
         Mockito.when(mLoginAPI.authenticate("param", "12345")).thenReturn(false);
         mLoginPresenter.onLoginButtonClick();
